@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coarse-kpath"
+version = "0.1.0"
+description = "Scripts for generating a coarsely sampled k-point path for VASP band structure calculations."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+authors = [
+    { name = "Milo V Carroll", email = "mxc1108@student.bham.ac.uk" }
+]
+
+[project.scripts]
+get_coarse_kpath = "get_coarse_kpath:main"
+
+[tool.setuptools]
+package-dir = { "" = "bin" }
+py-modules = ["get_coarse_kpath"]
